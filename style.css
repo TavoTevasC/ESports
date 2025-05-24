@@ -47,20 +47,17 @@
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100svh;
     background-repeat: no-repeat;
     background-image: url("img/background.jpg");
-    background-size: 2000px;
+    background-attachment: fixed;
     font-family: Arial, sans-serif;
     background-color: #222;
     color: white;
     margin: 0;
-}
-
-.main-container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  gap: 20px;
 }
 
 .content {
@@ -68,6 +65,42 @@ body {
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.7);
   border: 1px solid black;
+}
+
+@media only screen and (min-width: 1200px) {
+  .content {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .banner {
+    align-items: center;
+    justify-content: center;
+  }
+  .content {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .main-container {
+    justify-content: center;
+    width: 100svw;
+  }
+  .menu-btn {
+    left: 0px;
+    top: 0px;
+  }
+  .menu-list {
+    left: 0px;
+    top: 26px;
+  }
+}
+
+.main-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 h1 {
@@ -81,24 +114,18 @@ header {
 }
 
 .banner {
-  width: 40%;
-  padding: 20px;
+  flex: 1;
   height: fit-content;
   gap: 10px;
   display: flex;
   flex-direction: column;
 }
 
-.gallery {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
 .images{
   display: flex;
   justify-content: center;
   gap: 10px;
+  flex-wrap: wrap;
 }
 
 footer {
