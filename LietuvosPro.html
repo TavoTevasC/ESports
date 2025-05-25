@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/img/logo.png" type="image/png">
+    <title>ProZaidejai</title>
+</head>
+<header>
+    <img class="logo" src="/img/logo.png" alt="ESports Logo">
+</header>
+<script>
+function toggleMenu() {
+  const menu = document.getElementById("dropdown");
+  menu.style.display = (menu.style.display === "block") ? "none" : "block";
+}
+function toggleTooltip(photoId, tooltipId) {
+const photo = document.getElementById(photoId);
+const tooltip = document.getElementById(tooltipId);
+
+const isPhotoVisible = photo.style.display !== "none";
+
+photo.style.display = isPhotoVisible ? "none" : "block";
+tooltip.style.display = isPhotoVisible ? "block" : "none";
+}
+</script>
+<body>
+    <main>
+        <nav class="dropdown-nav">
+            <button onclick="toggleMenu()" class="menu-btn">☰ Meniu</button>
+            <ul id="dropdown" class="menu-list">
+                <li><a href="index.html">Pagrindinis</a></li>
+                <li><a href="istorija.html">Istorija</a></li>
+                <li><a href="PopuliariausiEsportZaidimai.html">Populiariausi žaidimai</a></li>
+                <li><a href="Zaidejai.html">ProZaidejai</a></li>
+                <li><a href="LietuvosPro.html">Lietuvos pro Esport zaidejai</a></li>
+            </ul>
+        </nav>
+        <div class="main-container">
+            <div class ="content">
+                <h1> Lietuvos eSporto žaidėjai </h1>
+                Iš geriausių žaidėjų buriamos ir esporto rinktinės, kurios dalyvauja tarptautinių sporto federacijų organizuojamuose elektroninio sporto turnyruose. Taip pat į rinktines susibūrę Lietuvos esporto žaidėjai dalyvauja ir tokių žaidimų kaip „Tekken 7“ bei „Counter-Strike: Global Offensive“ turnyruose. Kone daugiausiai lietuvių galima sutikti būtent pastarojo žaidimo turnyruose, nieko keisto, kad čia matome ir labiausiai pasižymėjusius žaidėjus.
+                „Counter-Strike“ fenomenas
+                <div class ="items">
+                        <div class="photo-container">
+                            <img src="img/justinas.png" id="photo1" onclick="toggleTooltip('photo1', 'tooltip1')" style="width:300px; cursor:pointer;">
+                            <div id="tooltip1" class="tooltip" style="display:none;" onclick="toggleTooltip('photo1', 'tooltip1')">
+                                <strong><h1>Justinas „jL“ Lekavičius</h1></strong><br>
+                                Vienas paskutinių pasiekimų, kuriuose nuskambėjo Lietuvos esporto žaidėjai, padarytas Justino „jL“ Lekavičiaus. 2024 metų kovo pabaigoje Danijos sostinėje Kopenhagoje jis triumfavo „Counter-Strike 2“ žaidimo pasaulio čempionate ir tapo naudingiausiu turnyro žaidėju. Nei pasiekti tokį asmeninį pasiekimą, nei triumfuoti šio esporto šakos pasaulio čempionate dar nebuvo pavykę nei vienam lietuviui.
+                                Triumfą lėmė sėkmingas 1999 metais gimusio Justino atstovaujamos Ukrainos esporto organizacijos „Natus Vincere“, dar kitaip žinomos kaip „NaVi“, pasirodymas – finale rezultatu 2:1 įveikta pirmoje pasaulio reitingo vietoje tuomet įsitaisiusi JAV esporto organizacija „FaZe Clan“. Triumfavusi „Natus Vincere“ komanda uždirbo 500 tūkst. JAV dolerių (apie 460 tūkst. eurų). Kiek anksčiau, 2023 metais, šis Lietuvos esporto žaidėjas su norvegų esporto organizacija „Apeks“ pasiekė „Counter-Strike: Global Offensive“ pasaulio čempionato pusfinalį. Pats žaidėjas per savo karjerą, skaičiuojama, jau uždirbo apie 216 tūkst. eurų.
+                            </div>
+                        </div>
+                        <div class="photo-container">
+                            <img src="img/zygimantas.png" id="photo2" onclick="toggleTooltip('photo2', 'tooltip2')" style="width:300px; cursor:pointer;">
+                            <div id="tooltip2" class="tooltip" style="display:none;" onclick="toggleTooltip('photo2', 'tooltip2')">
+                                <strong><h1>Žygimantas „Nukkye“ Chmieliauskas</h1></strong> <br>
+                                Persikvalifikavimas iš vienos esporto šakos į kitą elektroniniame sporte nėra jau toks dažnas reiškinys. 1997 metais gimęs Žygimantas „Nukkye“ Chmieliauskas iš pradžių sėkmingai dalyvavo „Counter Strike“ turnyruose, o vėliau, 2020 metais, persikvalifikavo į pirmojo asmens taktinių herojų šaudyklę „Valorant“. Dar žaisdamas „Counter Strike“ lietuvis yra triumfavęs pasauliniame „DreamHack Open Summer“ turnyre ir pasidalino 50 tūkst. eurų prizą. „Valorant“ žaidime Žygimantas karjerą pradėjo didžiausioje Ispanijos organizacijoje „Team Heretic“, vėliau atstovavo Europoje puikiai žinomai „G2 Esports“ organizacijai. Galiausiai prisijungė prie Ispanijos ekipos „Giants“, kuri po susijungimo su britų sporto organizacija „Excel Esports“ tapo „GIANTX“.
+                            </div>
+                        </div>
+                    <div class="photo-container">
+                        <img src="img/saulius.png" id="photo3" onclick="toggleTooltip('photo3', 'tooltip3')" style="width:300px; cursor:pointer;">
+                        <div id="tooltip3" class="tooltip" style="display:none;" onclick="toggleTooltip('photo3', 'tooltip3')">
+                            <strong><h1>Saulius</h1></strong><br>
+                             Lukošius yra vienas geriausių aktyvių „League of Legends“ žaidėjų Lietuvoje, pastaruoju metu atstovaujantis lietuvių organizacijai „Iron Wolves“. Daugiausiai titulų savo karjeroje „Saulius“ iškovojo būtent su pastarąja ekipa, tačiau taip pat yra rungtyniavęs garsioje Ispanijos komandoje „Origen“ bei Italijoje, kurios nacionaliniame turnyre 2019 vasarą užėmė antrą vietą. Iš viso lietuvio sąskaitoje yra 12 laimėtų turnyrų. „Esports Earnings“ teikiamais duomenimis, S.Lukošius per savo karjerą turnyruose iš viso iškovojo 7,5 tūkst. JAV dolerių.
+                        </div>
+                    </div>
+                    <div class="photo-container">
+                        <img src="img/eckas.png" id="photo4" onclick="toggleTooltip('photo4', 'tooltip4')" style="width:300px; cursor:pointer;">
+                        <div id="tooltip4" class="tooltip" style="display:none;" onclick="toggleTooltip('photo4', 'tooltip4')">
+                            <strong><h1>Eckas</h1></strong><br>
+                             „Jungler“ rolėje žaidžiantis Edgaras „Eckas“ Strazdauskas spalį prisijungė prie viename pagrindinių Ispanijos čempionatų rungtyniaujančios „Vodafone Giants“ ekipos ir su ja iškart tapo „Iberian Cup 2020“ čempionu. Nors „Eckui“ neseniai sukako 19 metų, jis jau yra žaidęs keliose garsiose Europos „League of Legends“ komandose, įskaitant jau minėtą „Vodafone Giants“ ar italų „Uoutplayed“, su kuria aštuonis kartus užėmė prizines vietas. Beje, Kauno „Žalgiriui“ sukūrus savo esporto komandą, E.Strazdauskas buvo tarp pirmųjų, pakviestų prisijungti. „Eckas“ per savo karjerą kol kas yra iškovojęs 6 titulus ir turnyruose uždirbęs beveik 3 tūkst. dolerių.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="banner">
+                <img src="/img/esports_banner.jpg" alt="banneris" style="width: 300px; height: 200px;">
+                <img class="blink" src="/img/esports_banner_animated.gif" alt="banneris" style="width: 300px; height: 200px;">
+            </div>
+        </div>
+    </main>
+ <footer>
+       © 2025 ESports. Visos teisės saugomos.
+</footer>
+</body>
+</html>
