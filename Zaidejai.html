@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/img/logo.png" type="image/png">
+    <title>ProZaidejai</title>
+</head>
+<header>
+    <img class="logo" src="/img/logo.png" alt="ESports Logo">
+</header>
+<script>
+function toggleMenu() {
+  const menu = document.getElementById("dropdown");
+  menu.style.display = (menu.style.display === "block") ? "none" : "block";
+}
+function toggleTooltip(photoId, tooltipId) {
+const photo = document.getElementById(photoId);
+const tooltip = document.getElementById(tooltipId);
+
+const isPhotoVisible = photo.style.display !== "none";
+
+photo.style.display = isPhotoVisible ? "none" : "block";
+tooltip.style.display = isPhotoVisible ? "block" : "none";
+}
+</script>
+<body>
+    <main>
+        <nav class="dropdown-nav">
+            <button onclick="toggleMenu()" class="menu-btn">☰ Meniu</button>
+            <ul id="dropdown" class="menu-list">
+                <li><a href="index.html">Pagrindinis</a></li>
+                <li><a href="istorija.html">Istorija</a></li>
+                <li><a href="PopuliariausiEsportZaidimai.html">Populiariausi žaidimai</a></li>
+                <li><a href="Zaidejai.html">ProZaidejai</a></li>
+                <li><a href="LietuvosPro.html">Lietuvos pro Esport zaidejai</a></li>
+            </ul>
+        </nav>
+        <div class="main-container">
+            <div class ="content">
+                <h1>Populiariausi ProZaidejai</h1>
+                <div class ="items">
+                        <div class="photo-container">
+                            <img src="img/faker.png" id="photo1" onclick="toggleTooltip('photo1', 'tooltip1')" style="width:300px; height: 200px; cursor:pointer;">
+                            <div id="tooltip1" class="tooltip" style="display:none;" onclick="toggleTooltip('photo1', 'tooltip1')">
+                                <strong> FAKER </strong> <br> (Lee Sang-hyeok) yra vienas garsiausių „League of Legends“ profesionalų iš Pietų Korėjos. Jis žinomas dėl savo įspūdingo žaidimo stiliaus, strateginio mąstymo ir daugybės pasaulio čempiono titulų su SK Telecom T1 komanda. 
+                                Jo pasiekimai ir įtaka žaidimui padarė jį legendiniu figūra el. sporto bendruomenėje.
+                            </div>
+                        </div>
+                        <div class="photo-container">
+                            <img src="img/simple.png" id="photo2" onclick="toggleTooltip('photo2', 'tooltip2')" style="width:300px; height: 200px; cursor:pointer;">
+                            <div id="tooltip2" class="tooltip" style="display:none;" onclick="toggleTooltip('photo2', 'tooltip2')">
+                                <strong> S1imple </strong> <br> (Oleksandr Kostyliev) yra vienas geriausių „Counter-Strike: Global Offensive“ žaidėjų pasaulyje, kilęs iš Ukrainos. Jis garsėja savo neįtikėtinu taiklumu, greita reakcija ir išskirtiniu žaidimo supratimu. s1mple laimėjo daugybę MVP apdovanojimų ir padėjo komandai Natus Vincere (Na'Vi) pasiekti tarptautinių pergalių CS:GO turnyruose.
+                            </div>
+                        </div>
+                    <div class="photo-container">
+                        <img src="img/derke.png" id="photo3" onclick="toggleTooltip('photo3', 'tooltip3')" style="width:300px; height: 200px; cursor:pointer;">
+                        <div id="tooltip3" class="tooltip" style="display:none;" onclick="toggleTooltip('photo3', 'tooltip3')">
+                            <strong> DERKE </strong> <br> (Nikita Sirmitev) yra profesionalus „Valorant“ žaidėjas iš Suomijos, žinomas dėl savo išskirtinio taiklumo ir agresyvaus žaidimo stiliaus. Jis atstovauja komandai Fnatic ir yra laikomas vienu geriausių „Valorant“ žaidėjų pasaulyje. Derke dažnai žaidžia kaip „duelist“ ir yra pelnęs daugybę MVP apdovanojimų tarptautiniuose turnyruose.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="banner">
+                <img src="/img/esports_banner.jpg" alt="banneris" style="width: 300px; height: 200px;">
+                <img class="blink" src="/img/esports_banner_animated.gif" alt="banneris" style="width: 300px; height: 200px;">
+            </div>
+        </div>
+    </main>
+ <footer>
+       © 2025 ESports. Visos teisės saugomos.
+</footer>
+</body>
+</html>
