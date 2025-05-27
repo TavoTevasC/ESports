@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/img/logo.png" type="image/png">
+    <title>ESports Istorija</title>
+</head>
+<header>
+    <img class="logo" src="/img/logo.png" alt="ESports Logo">
+</header>
+<script>
+function toggleMenu() {
+  const menu = document.getElementById("dropdown");
+  menu.style.display = (menu.style.display === "block") ? "none" : "block";
+}
+function toggleTooltip(photoId, tooltipId) {
+const photo = document.getElementById(photoId);
+const tooltip = document.getElementById(tooltipId);
+
+const isPhotoVisible = photo.style.display !== "none";
+
+photo.style.display = isPhotoVisible ? "none" : "block";
+tooltip.style.display = isPhotoVisible ? "block" : "none";
+}
+</script>
+<body>
+    <main>
+        <nav class="dropdown-nav">
+            <button onclick="toggleMenu()" class="menu-btn">☰ Meniu</button>
+            <ul id="dropdown" class="menu-list">
+                <li><a href="index.html">Pagrindinis</a></li>
+                <li><a href="istorija.html">Istorija</a></li>
+                <li><a href="Turnyrai.html">Turnyrai</a></li>
+                <li><a href="PopuliariausiEsportZaidimai.html">Populiariausi žaidimai</a></li>
+                <li><a href="Zaidejai.html">Esporto Žaidejai</a></li>
+                <li><a href="LietuvosPro.html">Lietuvos Esporto žaidėjai</a></li>
+                <li><a href="Karjera.html">Karjeros galimybės Esporte</a></li>
+                <li><a href="Sveikata.html">Esporto poveikis sveikatai ir psichologijai</a></li>
+                <li><a href="Transliacijos.html">Esporto Transliacijos ir Platformos</a></li>
+            </ul>
+        </nav>
+        <div class="main-container">
+            <div class ="content">
+                <h1>Esporto Transliacijos ir Platformos</h1>
+                <p>Esporto transliavimas pirmiausia yra internetinis reikalas. Populiariose platformose vyksta tiesioginiai eSporto renginių srautai, pritraukiantys milijonus žiūrovų visame pasaulyje. Šis perėjimas prie internetinio srautinio perdavimo iš naujo apibrėžė, kaip sporto gerbėjai pasiekia turinį, todėl jie gali stebėti savo mėgstamus žaidėjus ir žaidimus realiuoju laiku.</p>
+                <p class="boldwords">Interaktyvus įsitraukimas:</p>
+                <p>Esports transliacijos skatina auditorijos sąveiką kaip niekas kitas. Žiūrovai gali dalyvauti tiesioginiame pokalbyje, aukoti transliuotojams ar net daryti įtaką pačiam žaidimui per žaidimo elementus. Šis aukštas sąveikos lygis padėjo eSports transliuotojams sukurti tvirtą ir ištikimų gerbėjų bazę.</p>
+                <p class="boldwords">Integracija tarp platformų:</p>
+                <p>Esports transliacijos neapsiriboja viena platforma. Jie dažnai integruoja kelis socialinės žiniasklaidos kanalus ir bendradarbiauja su influenceriais, siekdami pasiekti platesnę auditoriją, peržengdami tradicines transliavimo kliūtis.</p>
+                <h1>Platformos</h1>
+                <div class ="items">
+                    <div class="photo-container">
+                        <img src="img/Twitch.png" id="photo1" onclick="toggleTooltip('photo1', 'tooltip1')" style="width:300px; cursor:pointer;">
+                        <div id="tooltip1" class="tooltip" style="display:none;" onclick="toggleTooltip('photo1', 'tooltip1')">
+                            <strong><h1>Twitch platforma</h1></strong><br>
+                            Twitch yra viena iš populiariausių transliavimo platformų, skirta žaidimams ir eSportui. Ji leidžia žaidėjams transliuoti savo žaidimo sesijas tiesiogiai, o žiūrovams bendrauti su jais per pokalbių langą. Twitch taip pat siūlo galimybę prenumeruoti kanalus, kad gautumėte papildomų privalumų, tokių kaip emotikonai ir reklamos šalinimas.
+                        </div>
+                    </div>
+                    <div class="photo-container">
+                        <img src="img/Youtube.webp" id="photo2" onclick="toggleTooltip('photo2', 'tooltip2')" style="width:270px; cursor:pointer;">
+                        <div id="tooltip2" class="tooltip" style="display:none;" onclick="toggleTooltip('photo2', 'tooltip2')">
+                            <strong><h1>Youtube platforma</h1></strong><br>
+                            YouTube taip pat yra populiari platforma, kurioje galima rasti eSporto transliacijas ir įrašus. Daugelis profesionalių žaidėjų ir komandų turi savo kanalus, kuriuose jie dalijasi žaidimo strategijomis, įžvalgomis ir transliacijomis. Be to, YouTube siūlo galimybę kurti turinį, kuris gali būti susijęs su eSportu, pavyzdžiui, apžvalgos ar mokomieji vaizdo įrašai.
+                        </div>
+                    </div>
+                    <div class="photo-container">
+                        <img src="img/Kick.png" id="photo3" onclick="toggleTooltip('photo3', 'tooltip3')" style="width:600px; cursor:pointer;">
+                        <div id="tooltip3" class="tooltip" style="display:none;" onclick="toggleTooltip('photo3', 'tooltip3')">
+                            <strong><h1>Kick platforma</h1></strong><br>
+                            Kick yra nauja transliavimo platforma, kuri sparčiai populiarėja tarp žaidėjų ir eSporto bendruomenės. Ji siūlo panašias funkcijas kaip Twitch, tačiau taip pat suteikia galimybę žaidėjams užsidirbti pinigų per prenumeratas ir dovanų. Kick taip pat skiria dėmesį bendruomenės kūrimui ir sąveikai tarp žaidėjų bei žiūrovų.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="banner">
+                <img src="/img/esports_banner.jpg" alt="banneris" style="width: 300px; height: 200px;">
+                <img class="blink" src="/img/esports_banner_animated.gif" alt="banneris" style="width: 300px; height: 200px;">
+            </div>
+        </div>
+    </main>
+ <footer>
+       © 2025 ESports. Visos teisės saugomos.
+</footer>
+</body>
+</html>
