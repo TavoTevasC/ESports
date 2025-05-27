@@ -35,7 +35,7 @@ function toggleMenu() {
         <div class="main-container">
             <div class ="content">
                 <h1>Elektroninio sporto istorija</h1>
-                <p>Elektroninio sporto varžybose žaidžiami įvairūs žaidimai. Tokio tipo turnyrai radosi XX a. paskutiniame dešimtmetyje. Tuomet juose daugiausiai žaisti muštynių ir šaudykliniai žaidimai, kadangi jie tuo metu buvo populiarūs tarp žaidėjų. Šiems žaidimams atsidavusių mėgėjų bendruomenė vis dar aktyvi ir yra linkusi save išskirti iš kitų labiau į komerciją orientuotų žaidimų žanrų turnyrų bendruomenių. XXI a. pradžioje realaus laiko strateginiai žaidimai labai išpopuliarėjo interneto kavinėse Pietų Korėjoje ir ženkliai prisidėjo prie el. sporto plėtros pasauliniu mastu. 2010 m. itin populiariu žanru el. sporto turnyruose tapo MOBA žaidimai. Vyksta įvairaus žanro žaidimų turnyrai, tačiau populiarumo viršūnėje dominuoja „League of Legends“, „Dota 2“, „Counter-Strike: Global Offensive“ ir „StarCraft II“. „Hearthstone“ nuo savo pasirodymo 2014 m. el. sporto turnyruose išpopuliarino CCG žanrą.</p>
+                <p>Elektroninio sporto varžybose žaidžiami įvairūs žaidimai. Tokio tipo turnyrai radosi XX a. paskutiniame dešimtmetyje. Tuomet juose daugiausiai žaisti muštynių ir šaudykliniai žaidimai, kadangi jie tuo metu buvo populiarūs tarp žaidėjų. Šiems žaidimams atsidavusių mėgėjų bendruomenė vis dar aktyvi ir yra linkusi save išskirti iš kitų labiau į komerciją orientuotų žaidimų žanrų turnyrų bendruomenių. XXI a. pradžioje realaus laiko strateginiai žaidimai labai išpopuliarėjo interneto kavinėse Pietų Korėjoje ir ženkliai prisidėjo prie el. sporto plėtros pasauliniu mastu. 2010 m. itin populiariu žanru el. sporto turnyruose tapo <span class="tooltip-term" data-tooltip="Žaidimo žanras, kuriame dvi komandos kovoja tarpusavyje žemėlapyje, siekdamos sunaikinti priešo bazę.">MOBA</span> Kompiuterinės sistemos gebėjimas imituoti žmogaus intelektą. žaidimai. Vyksta įvairaus žanro žaidimų turnyrai, tačiau populiarumo viršūnėje dominuoja „League of Legends“, „Dota 2“, „Counter-Strike: Global Offensive“ ir „StarCraft II“. „Hearthstone“ nuo savo pasirodymo 2014 m. el. sporto turnyruose išpopuliarino CCG žanrą.</p>
             </div>
             <div class="banner">
                 <img src="/img/esports_banner.jpg" alt="banneris" style="width: 300px; height: 200px;">
@@ -47,4 +47,22 @@ function toggleMenu() {
        © 2025 ESports. Visos teisės saugomos.
     </footer>
 </body>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll('.tooltip-term').forEach(term => {
+      term.addEventListener('mouseenter', function () {
+        let tooltip = document.createElement('div');
+        tooltip.className = 'tooltip-box';
+        tooltip.textContent = term.dataset.tooltip;
+        term.appendChild(tooltip);
+        tooltip.style.display = 'block';
+      });
+
+      term.addEventListener('mouseleave', function () {
+        const tooltip = term.querySelector('.tooltip-box');
+        if (tooltip) tooltip.remove();
+      });
+    });
+  });
+</script>
 </html>
