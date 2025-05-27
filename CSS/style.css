@@ -51,7 +51,7 @@ body {
     justify-content: space-between;
     height: 100svh;
     background-repeat: no-repeat;
-    background-image: url("img/background.jpg");
+    background-image: url("/img/background.jpg");
     background-attachment: fixed;
     font-family: Arial, sans-serif;
     font-size: 16px;
