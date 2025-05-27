@@ -50,6 +50,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     height: 100svh;
+    background-size: cover;
     background-repeat: no-repeat;
     background-image: url("/img/background.jpg");
     background-attachment: fixed;
@@ -166,4 +167,25 @@ footer {
 .boldwords {
   font-weight: bold;
   font-size: 20px;
+}
+
+.tooltip-term {
+  position: relative;
+  cursor: help;
+  border-bottom: 1px solid yellow;
+}
+
+.tooltip-box {
+  font-size: 12px;
+  display: none;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid black;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 200px;
+  top: 120%;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
