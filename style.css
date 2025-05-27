@@ -163,3 +163,8 @@ footer {
   cursor: pointer;
   margin: 20px;
 }
+
+.boldwords {
+  font-weight: bold;
+  font-size: 20px;
+}
