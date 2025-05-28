@@ -61,7 +61,7 @@ tooltip.style.display = isPhotoVisible ? "block" : "none";
                     <div class="photo-container">
                         <img src="/img/derke.png" id="photo3" onclick="toggleTooltip('photo3', 'tooltip3')" style="width:300px; height: 200px; cursor:pointer;">
                         <div id="tooltip3" class="tooltip" style="display:none;" onclick="toggleTooltip('photo3', 'tooltip3')">
-                            <strong> DERKE </strong> <br> (Nikita Sirmitev) yra profesionalus „Valorant“ žaidėjas iš Suomijos, žinomas dėl savo išskirtinio taiklumo ir agresyvaus žaidimo stiliaus. Jis atstovauja komandai Fnatic ir yra laikomas vienu geriausių „Valorant“ žaidėjų pasaulyje. Derke dažnai žaidžia kaip „duelist“ ir yra pelnęs daugybę MVP apdovanojimų tarptautiniuose turnyruose.
+                            <strong> DERKE </strong> <br> (Nikita Sirmitev) yra profesionalus „Valorant“ žaidėjas iš Suomijos, žinomas dėl savo išskirtinio taiklumo ir agresyvaus žaidimo stiliaus. Jis atstovauja komandai Fnatic ir yra laikomas vienu geriausių „Valorant“ žaidėjų pasaulyje. Derke dažnai žaidžia kaip <span class="tooltip-term" data-tooltip="Tai agresyvaus stiliaus žaidėjas, kurio tikslas – pirmauti atakuojant, pradėti kovas (engage) ir išmušti varžovus.">  „duelist“ </span> ir yra pelnęs daugybę MVP apdovanojimų tarptautiniuose turnyruose.
                         </div>
                     </div>
                 </div>
@@ -76,4 +76,22 @@ tooltip.style.display = isPhotoVisible ? "block" : "none";
        © 2025 ESports. Visos teisės saugomos.
 </footer>
 </body>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll('.tooltip-term').forEach(term => {
+      term.addEventListener('mouseenter', function () {
+        let tooltip = document.createElement('div');
+        tooltip.className = 'tooltip-box';
+        tooltip.textContent = term.dataset.tooltip;
+        term.appendChild(tooltip);
+        tooltip.style.display = 'block';
+      });
+
+      term.addEventListener('mouseleave', function () {
+        const tooltip = term.querySelector('.tooltip-box');
+        if (tooltip) tooltip.remove();
+      });
+    });
+  });
+</script>
 </html>
