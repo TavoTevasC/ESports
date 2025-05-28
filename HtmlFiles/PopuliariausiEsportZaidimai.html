@@ -6,10 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/img/logo.png" type="image/png">
     <title>Populiariausi Esport Zaidimai</title>
-</head>
-<header>
-    <img class="logo" src="/img/logo.png" alt="ESports Logo">
-</header>
 <script>
 function toggleMenu() {
   const menu = document.getElementById("dropdown");
@@ -26,7 +22,13 @@ function toggleTooltip(photoId, tooltipId) {
   tooltip.style.display = isPhotoVisible ? "block" : "none";
 }
 </script>
+</head>
+
+
 <body>
+<header>
+    <img class="logo" src="/img/logo.png" alt="ESports Logo">
+</header>
     <main>
         <nav class="dropdown-nav">
             <button onclick="toggleMenu()" class="menu-btn">☰ Meniu</button>
@@ -48,21 +50,21 @@ function toggleTooltip(photoId, tooltipId) {
                 <h1>Populiariausi Esport žaidimai</h1>
                 <div class ="items">
                     <div class="photo-container">
-                        <img src="/img/lol.png" id="photo1" onclick="toggleTooltip('photo1', 'tooltip1')" style="width:300px; height: 200px; cursor:pointer;">
+                        <img src="/img/lol.png" alt="League of Legends" id="photo1" onclick="toggleTooltip('photo1', 'tooltip1')" style="width:300px; height: 200px; cursor:pointer;">
                         <div id="tooltip1" class="tooltip" style="display:none;" onclick="toggleTooltip('photo1', 'tooltip1')">
                             <strong> League of Legends </strong> <br>yra vienas iš populiariausių ESport žaidimų pasaulyje. Jį sukūrė Riot Games 2009 metais. Žaidime dvi komandos po penkis žaidėjus varžosi dėl pergalės, siekdamos sunaikinti priešininkų bazę. LoL garsėja dideliais turnyrais, tokiais kaip „Worlds“, kuriuose prizų fondai siekia milijonus dolerių.
                         </div>
                     </div>
 
                     <div class="photo-container">
-                        <img src="/img/valorant.png" id="photo2" onclick="toggleTooltip('photo2', 'tooltip2')" style="width:300px; height: 200px; cursor:pointer;">
+                        <img src="/img/valorant.png" alt="Valorant" id="photo2" onclick="toggleTooltip('photo2', 'tooltip2')" style="width:300px; height: 200px; cursor:pointer;">
                         <div id="tooltip2" class="tooltip" style="display:none;" onclick="toggleTooltip('photo2', 'tooltip2')">
                             <strong>Valorant</strong> <br>yra taktinis šaudyklės žanro ESport žaidimas, kurį 2020 metais sukūrė Riot Games. Žaidime dvi komandos po penkis žaidėjus kovoja tarpusavyje, naudodamos unikalius agentų gebėjimus ir strategiją. Valorant greitai išpopuliarėjo dėl savo dinamiško žaidimo ir didelių turnyrų, tokių kaip „Valorant Champions Tour“, kuriuose prizų fondai siekia šimtus tūkstančių dolerių.
                         </div>
                     </div>
 
                     <div class="photo-container">
-                        <img src="/img/csgo.png" id="photo3" onclick="toggleTooltip('photo3', 'tooltip3')" style="width:300px; height: 200px; cursor:pointer;">
+                        <img src="/img/csgo.png" alt="Counter-Strike: Global Offensive (CS:GO)" id="photo3" onclick="toggleTooltip('photo3', 'tooltip3')" style="width:300px; height: 200px; cursor:pointer;">
                         <div id="tooltip3" class="tooltip" style="display:none;" onclick="toggleTooltip('photo3', 'tooltip3')">
                             <strong>Counter-Strike: Global Offensive (CS:GO)</strong> <br>yra vienas žinomiausių šaudyklių žanro ESport žaidimų. Jį sukūrė Valve ir išleido 2012 metais. Žaidime dvi komandos – teroristai ir kontrteroristai – varžosi dėl užduočių įvykdymo ar priešininkų eliminavimo. CS:GO garsėja dideliais turnyrais, tokiais kaip „Major Championships“, kuriuose prizų fondai siekia milijonus eurų.
                         </div>
