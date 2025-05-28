@@ -48,14 +48,14 @@ tooltip.style.display = isPhotoVisible ? "block" : "none";
                 <p class="boldwords">Interaktyvus įsitraukimas:</p>
                 <p>Esports transliacijos skatina auditorijos sąveiką kaip niekas kitas. Žiūrovai gali dalyvauti tiesioginiame pokalbyje, aukoti transliuotojams ar net daryti įtaką pačiam žaidimui per žaidimo elementus. Šis aukštas sąveikos lygis padėjo eSports transliuotojams sukurti tvirtą ir ištikimų gerbėjų bazę.</p>
                 <p class="boldwords">Integracija tarp platformų:</p>
-                <p>Esports transliacijos neapsiriboja viena platforma. Jie dažnai integruoja kelis socialinės žiniasklaidos kanalus ir bendradarbiauja su influenceriais, siekdami pasiekti platesnę auditoriją, peržengdami tradicines transliavimo kliūtis.</p>
+                <p>Esports transliacijos neapsiriboja viena platforma. Jie dažnai integruoja kelis socialinės žiniasklaidos kanalus ir bendradarbiauja su <span class="tooltip-term" data-tooltip="Tai įtaką darantis asmuo, kuris per savo turinį socialinėje medijoje skatina sekėjus domėtis produktais, idėjomis ar gyvenimo būdu."> influenceriais </span>, siekdami pasiekti platesnę auditoriją, peržengdami tradicines transliavimo kliūtis.</p>
                 <h1>Platformos</h1>
                 <div class ="items">
                     <div class="photo-container">
                         <img src="/img/Twitch.png" id="photo1" onclick="toggleTooltip('photo1', 'tooltip1')" style="width:300px; cursor:pointer;">
                         <div id="tooltip1" class="tooltip" style="display:none;" onclick="toggleTooltip('photo1', 'tooltip1')">
                             <strong><h1>Twitch platforma</h1></strong><br>
-                            Twitch yra viena iš populiariausių transliavimo platformų, skirta žaidimams ir eSportui. Ji leidžia žaidėjams transliuoti savo žaidimo sesijas tiesiogiai, o žiūrovams bendrauti su jais per pokalbių langą. Twitch taip pat siūlo galimybę prenumeruoti kanalus, kad gautumėte papildomų privalumų, tokių kaip emotikonai ir reklamos šalinimas.
+                            Twitch yra viena iš populiariausių transliavimo platformų, skirta žaidimams ir eSportui. Ji leidžia žaidėjams transliuoti savo žaidimo sesijas tiesiogiai, o žiūrovams bendrauti su jais per pokalbių langą. Twitch taip pat siūlo galimybę prenumeruoti kanalus, kad gautumėte papildomų privalumų, tokių kaip <span class="tooltip-term" data-tooltip="Tai vaizdiniai simboliai, perteikiantys nuotaiką, emocijas ar veiksmus, dažniausiai naudojami žinutėse, socialiniuose tinkluose ir komentaruose."> emotikonai </span> ir reklamos šalinimas.
                         </div>
                     </div>
                     <div class="photo-container">
@@ -84,4 +84,22 @@ tooltip.style.display = isPhotoVisible ? "block" : "none";
        © 2025 ESports. Visos teisės saugomos.
 </footer>
 </body>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll('.tooltip-term').forEach(term => {
+      term.addEventListener('mouseenter', function () {
+        let tooltip = document.createElement('div');
+        tooltip.className = 'tooltip-box';
+        tooltip.textContent = term.dataset.tooltip;
+        term.appendChild(tooltip);
+        tooltip.style.display = 'block';
+      });
+
+      term.addEventListener('mouseleave', function () {
+        const tooltip = term.querySelector('.tooltip-box');
+        if (tooltip) tooltip.remove();
+      });
+    });
+  });
+</script>
 </html>
