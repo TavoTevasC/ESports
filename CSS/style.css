@@ -125,7 +125,6 @@ header {
 }
 
 .banner {
-  flex: 1;
   height: fit-content;
   gap: 10px;
   display: flex;
@@ -140,6 +139,7 @@ header {
 }
 
 footer {
+  margin-top: 10px;
   text-align: center;
   padding: 20px;
   background-color: rgba(0, 0, 0, 1);
@@ -190,4 +190,24 @@ footer {
   left: 0;
   z-index: 1000;
   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+.content li a {
+  color: violet;
+  text-decoration: none;
+}
+
+.content li a:hover {
+  color: yellow;
+}
+
+.banner a {
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+.banner a:hover {
+	background-color: black;
+  width: 300px;
+  height: 200px;
+	transform: scale(1.05);
 }
